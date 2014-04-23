@@ -1,15 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ## This function creates a matrix object that can cache its inverse.
-
 makeCacheMatrix <- function(x = matrix()) {
         n <- NULL
         set <- function(y) {
                 x <<- y
                 n <<- NULL
         }
-        
+        ## getter and setter methods to allow caching of inverse in the object
         get <- function() x
         
         setInverse <- function(inverse) n <<- inverse
@@ -19,7 +15,6 @@ makeCacheMatrix <- function(x = matrix()) {
              setInverse = setInverse,
              getInverse = getInverse)
 }
-
 
 ## This function computes the inverse of a matrix or retrieves the inverse 
 ## of the matrix, if it has alreay been computed, from the cache.
